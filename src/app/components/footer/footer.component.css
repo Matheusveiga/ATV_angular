@@ -1,0 +1,70 @@
+/* Footer geral */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    z-index: 1000;
+  }
+  
+  /* Barra cinza superior */
+  .top-bar {
+    background-color: rgba(128, 128, 128, 0.8);
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .page-up-button {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .page-up-button:hover {
+    color: #555;
+  }
+  
+  /* Barra preta inferior */
+  .bottom-bar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+  }
+  
+  /* Campos do footer */
+  .footer-section {
+    flex: 1;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Redes sociais */
+  .social-icons a {
+    margin: 0 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .social-icons a:hover {
+    color: #ccc;
+  }
+  

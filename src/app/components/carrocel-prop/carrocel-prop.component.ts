@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-corrosel-prop',  // Alterado para evitar conflito
-  templateUrl: './carrocel-prop.component.html',  // Alterado
-  styleUrls: ['./carrocel-prop.component.css']  // Alterado
+  selector: 'app-carrocel-prop',  // Seletor atualizado para evitar conflito
+  templateUrl: './carrocel-prop.component.html',  // Nome do arquivo atualizado
+  styleUrls: ['./carrocel-prop.component.css']  // Nome do arquivo de estilo atualizado
 })
-export class CorroselPropComponent implements OnInit, OnDestroy {
+export class CarrocelPropComponent implements OnInit, OnDestroy {
   currentIndex = 0;
   images = [
     'https://via.placeholder.com/1500x500/FF5733/FFFFFF?text=Imagem+1',

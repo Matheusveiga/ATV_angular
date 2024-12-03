@@ -4,13 +4,13 @@ import { HomeComponent } from "./components/home/home.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { CommonModule, NgFor } from '@angular/common';
-import { CarrocelPropComponent } from "./components/carrocel-prop/carrocel-prop.component";
+import { BannercarroselComponent } from "./components/bannercarrosel/bannercarrosel.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, HeaderComponent, FooterComponent, CarrocelPropComponent],
+  imports: [RouterOutlet, HomeComponent, HeaderComponent, FooterComponent, BannercarroselComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

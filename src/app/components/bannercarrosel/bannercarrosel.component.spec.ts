@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CarrocelPropComponent } from './carrocel-prop.component';
+import { BannercarroselComponent } from './bannercarrosel.component';
 
-describe('CarrocelPropComponent', () => {
-  let component: CarrocelPropComponent;
-  let fixture: ComponentFixture<CarrocelPropComponent>;
+describe('BannercarroselComponent', () => {
+  let component: BannercarroselComponent;
+  let fixture: ComponentFixture<BannercarroselComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CarrocelPropComponent]
+      imports: [BannercarroselComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CarrocelPropComponent);
+    fixture = TestBed.createComponent(BannercarroselComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

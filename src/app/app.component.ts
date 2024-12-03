@@ -16,4 +16,6 @@ import { BannercarroselComponent } from "./components/bannercarrosel/bannercarro
 })
 export class AppComponent {
   title = 'ATV_Angular';
+  
 }
+

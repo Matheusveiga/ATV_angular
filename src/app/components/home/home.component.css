@@ -1,4 +1,6 @@
 /* Container principal para exibir os produtos */
+
+
 .product-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsividade */
@@ -68,3 +70,9 @@
     background-color: #218838;
   }
   
+  .banner2{
+
+    width: auto;
+    height: 200px;
+  }
+

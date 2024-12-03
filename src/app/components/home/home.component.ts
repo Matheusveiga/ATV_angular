@@ -19,10 +19,9 @@ export class HomeComponent {
     { name: 'Produto 5', description: 'Descrição do produto 5', price: 200.0, image: 'https://via.placeholder.com/150' },
     { name: 'Produto 6', description: 'Descrição do produto 6', price: 250.0, image: 'https://via.placeholder.com/150' },
     { name: 'Produto 7', description: 'Descrição do produto 7', price: 300.0, image: 'https://via.placeholder.com/150' },
-    { name: 'Produto 8', description: 'Descrição do produto 8', price: 350.0, image: 'https://via.placeholder.com/150' },
-    { name: 'Produto 9', description: 'Descrição do produto 9', price: 400.0, image: 'https://via.placeholder.com/150' },
-    { name: 'Produto 10', description: 'Descrição do produto 10', price: 450.0, image: 'https://via.placeholder.com/150' },
+
   ];
+
 
   // Método para adicionar produto ao carrinho (funcionalidade pode ser expandida)
   addToCart(product: any) {

@@ -1,15 +1,4 @@
-import { Component } from '@angular/core';
 import { Injectable } from '@angular/core';
-
-@Component({
-  selector: 'app-cart',
-  imports: [],
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css'
-})
-export class CartComponent {
-
-}
 
 interface CartItem {
   id: number;
@@ -46,5 +35,3 @@ export class CartService {
     return this.cart.reduce((total, item) => total + item.price * item.quantity, 0);
   }
 }
-
-

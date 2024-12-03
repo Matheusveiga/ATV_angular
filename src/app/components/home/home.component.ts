@@ -27,5 +27,10 @@ export class HomeComponent {
   addToCart(product: any) {
     console.log('Produto adicionado ao carrinho:', product);
     // Aqui você pode adicionar a lógica para redirecionar para o carrinho ou salvar no localStorage
+    name: product.name;
+    description: product.description;
+    price: product.price;
+    image: product.image;
+
   }
 }

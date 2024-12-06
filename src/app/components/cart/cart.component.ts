@@ -1,7 +1,42 @@
 import { Component } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { Cart } from '@angular/core';
+import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
+@Component({
+  selector: 'app-frete-produto',
+  standalone: true,
+  templateUrl: './frete-produto.component.html',
+  styleUrls: ['./frete-produto.component.css'],
+  imports: [ReactiveFormsModule] // Importando ReactiveFormsModule
+})
+export class FreteProdutoComponent {
+  freteForm: FormGroup;
+  freteMessage: string = '';
+  quantidadeControl: FormControl;
+
+  constructor(private fb: FormBuilder) {
+    this.freteForm = this.fb.group({
+      endereco: ['', Validators.required],
+      numero: ['', Validators.required],
+      cep: ['', Validators.required],
+      cidade: ['', Validators.required],
+      estado: ['', Validators.required]
+    });
+
+    this.quantidadeControl = new FormControl(1);
+  }
+
+  calcularFrete() {
+    const valorFrete = Math.floor(Math.random() * 100) + 1; // Valor aleatório entre 1 e 100
+    this.freteMessage = `Valor do frete: R$ ${valorFrete},00`;
+  }
+
+  comprar() {
+    const quantidade = this.quantidadeControl.value;
+    alert(`Você comprou ${quantidade} unidade(s) do produto!`);
+  }
+}
 
 // Parte logica do Formulario 
 @Cart({

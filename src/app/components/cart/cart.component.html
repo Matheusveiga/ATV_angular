@@ -1,4 +1,16 @@
 <div class="container">
+  <div class="form-section">
+    <h2>Calcular Frete</h2>
+    <form [formGroup]="freteForm" (ngSubmit)="calcularFrete()">
+      <input formControlName="endereco" placeholder="Endereço" required>
+      <input formControlName="numero" placeholder="Número" required>
+      <input formControlName="cep" placeholder="CEP" required>
+      <input formControlName="cidade" placeholder="Cidade" required>
+      <input formControlName="estado" placeholder="Estado" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="message" *ngIf="freteMessage">{{ freteMessage }}</div>
+  </div>
 
   <div class="product-section">
     <h2>Informações do Produto</h2>
@@ -9,27 +21,11 @@
         <p>Preço à vista: R$ 100,00</p>
         <p>Parcelado: 3x de R$ 35,00</p>
         <label for="quantidade">Quantidade:</label>
-        <select [(ngModel)]="quantidade" name="quantidade">
+        <select [formControl]="quantidadeControl">
           <option *ngFor="let i of [1, 2, 3, 4, 5]" [value]="i">{{ i }}</option>
         </select>
         <button (click)="comprar()">Comprar</button>
       </div>
     </div>
   </div>
-
-
-  <div class="form-section">
-    <h2>Calcular Frete</h2>
-    <form (ngSubmit)="calcularFrete()" #freteForm="ngForm">
-      <input type="text" placeholder="Endereço" required [(ngModel)]="endereco" name="endereco">
-      <input type="text" placeholder="Número" required [(ngModel)]="numero" name="numero">
-      <input type="text" placeholder="CEP" required [(ngModel)]="cep" name="cep">
-      <input type="text" placeholder="Cidade" required [(ngModel)]="cidade" name="cidade">
-      <input type="text" placeholder="Estado" required [(ngModel)]="estado" name="estado">
-      <button type="submit">Enviar</button>
-    </form>
-    <div class="message" *ngIf="freteMessage">{{ freteMessage }}</div>
-  </div>
-
 </div>
-

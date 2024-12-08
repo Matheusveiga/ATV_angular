@@ -19,6 +19,11 @@ export class HomeComponent {
     { name: 'Produto 5', description: 'Descrição do produto 5', price: 200.0, image: 'https://via.placeholder.com/150' },
     { name: 'Produto 6', description: 'Descrição do produto 6', price: 250.0, image: 'https://via.placeholder.com/150' },
     { name: 'Produto 7', description: 'Descrição do produto 7', price: 300.0, image: 'https://via.placeholder.com/150' },
+    { name: 'Produto 7', description: 'Descrição do produto 8', price: 300.0, image: 'https://via.placeholder.com/150' },
+    { name: 'Produto 7', description: 'Descrição do produto 9', price: 300.0, image: 'https://via.placeholder.com/150' },
+    { name: 'Produto 7', description: 'Descrição do produto 10', price: 300.0, image: 'https://via.placeholder.com/150' },
+    { name: 'Produto 7', description: 'Descrição do produto 11', price: 300.0, image: 'https://via.placeholder.com/150' },
+    { name: 'Produto 7', description: 'Descrição do produto 12', price: 300.0, image: 'https://via.placeholder.com/150' },
 
   ];
 

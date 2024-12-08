@@ -17,7 +17,7 @@ export class CartComponent {
   }
 }
 
-@Component({
+Component({
   selector: 'app-cart',
   imports: [],
   templateUrl: './cart.component.html',

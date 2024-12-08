@@ -1,92 +1,67 @@
 import { Component } from '@angular/core';
-import { Injectable } from '@angular/core';
-import { Component } from '@angular/core';
-import { ReactiveFormsModule, FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+
+
+export class CartComponent {
+  produto = {
+    nome: 'Produto Exemplo',
+    imagem: 'https://via.placeholder.com/150',
+    precoAVista: 199.99,
+    precoParcelado: 229.99
+  };
+
+  valorFrete: number | null = null;
+
+  calcularFrete() {
+    // Gera um valor de frete aleatório entre 10 e 50 reais
+    this.valorFrete = parseFloat((Math.random() * (50 - 10) + 10).toFixed(2));
+  }
+}
 
 @Component({
-  selector: 'app-frete-produto',
-  standalone: true,
-  templateUrl: './frete-produto.component.html',
-  styleUrls: ['./frete-produto.component.css'],
-  imports: [ReactiveFormsModule] // Importando ReactiveFormsModule
+  selector: 'app-cart',
+  imports: [],
+  templateUrl: './cart.component.html',
+  styleUrl: './cart.component.css'
 })
-export class FreteProdutoComponent {
-  freteForm: FormGroup;
-  freteMessage: string = '';
-  quantidadeControl: FormControl;
 
-  constructor(private fb: FormBuilder) {
-    this.freteForm = this.fb.group({
-      endereco: ['', Validators.required],
-      numero: ['', Validators.required],
-      cep: ['', Validators.required],
-      cidade: ['', Validators.required],
-      estado: ['', Validators.required]
-    });
 
-    this.quantidadeControl = new FormControl(1);
-  }
 
-  calcularFrete() {
-    const valorFrete = Math.floor(Math.random() * 100) + 1; // Valor aleatório entre 1 e 100
-    this.freteMessage = `Valor do frete: R$ ${valorFrete},00`;
-  }
 
-  comprar() {
-    const quantidade = this.quantidadeControl.value;
-    alert(`Você comprou ${quantidade} unidade(s) do produto!`);
-  }
+interface CartItem {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
 }
 
-// Parte logica do Formulario 
-@Cart({
-  selector: 'app-frete-produto',
-  templateUrl: './frete-produto.component.html',
-  styleUrls: ['./frete-produto.component.css']
+({
+  providedIn: 'root',
 })
-export class FreteProdutoComponent {
-  endereco: string = '';
-  numero: string = '';
-  cep: string = '';
-  cidade: string = '';
-  estado: string = '';
-  freteMessage: string = '';
-  quantidade: number = 1;
+export class CartService {
+  private cart: CartItem[] = [];
 
-  calcularFrete() {
-    const valorFrete = Math.floor(Math.random() * 100) + 1; // Valor aleatório entre 1 e 100
-    this.freteMessage = `Valor do frete: R$ ${valorFrete},00`;
+  constructor() {}
+
+  // Adicionar item ao carrinho
+  addToCart(item: CartItem): void {
+    const foundItem = this.cart.find((cartItem) => cartItem.id === item.id);
+    if (foundItem) {
+      foundItem.quantity += item.quantity;
+    } else {
+      this.cart.push(item);
+    }
   }
 
-  comprar() {
-    alert(`Você comprou ${this.quantidade} unidade(s) do produto!`);
+  // Obter todos os itens no carrinho
+  getCartItems(): CartItem[] {
+    return [...this.cart];
+  }
+
+  // Calcular o total do carrinho
+  getCartTotal(): number {
+    return this.cart.reduce((total, item) => total + item.price * item.quantity, 0);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,0 +1,64 @@
+<header>
+    <nav class="navbar">
+      <div class="logo"><img src="logo.png"></div>
+  
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <button>
+          <img class="lupa1" src="lupa.png">
+        </button>
+      </div>
+  
+      <div class="nav-buttons">
+        <button routerLink="/carrinho" class="cart-button">
+          <img src="cart.png" class="cart1">
+        </button>
+        <button routerLink="/home" class="login-button">
+          <i class="fas fa-user"></i> Login
+        </button>
+        <div class="user-photo">
+          <img src="user.png" alt="User Photo" />
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <img src="bannercentral.png">
+  </div>
+  <main>
+    
+  </main>
+  
+  <footer class="footer">
+    <!-- Parte superior: barra cinza -->
+    <div class="top-bar">
+        <button class="page-up-button" (click)="scrollToTop()">Page up</button>
+    </div>
+  
+    <!-- Parte inferior: barra preta com 4 campos -->
+    <div class="bottom-bar">
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p>Telefone: (11) 1234-5678</p>
+        </div>
+        <div class="footer-section">
+            <h3>Suporte</h3>
+            <p>FAQ</p>
+            <p>Central de Ajuda</p>
+        </div>
+        <div class="footer-section">
+            <h3>Redes Sociais</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Endereços</h3>
+            <p>Rua Exemplo, 123 - São Paulo, SP</p>
+            <p>Avenida Teste, 456 - Rio de Janeiro, RJ</p>
+        </div>
+    </div>
+  </footer>
